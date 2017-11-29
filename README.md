@@ -1,6 +1,6 @@
 # RSO: Orders microservice
 
-## Prerequisites
+## Prerequisites-
 
 ```bash
 docker run -d --name rso-orders -e POSTGRES_USER=dbuser -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=customer -p 5432:5432 postgres:latest
