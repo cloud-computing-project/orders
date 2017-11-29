@@ -1,4 +1,4 @@
-# RSO: Customers microservice
+# RSO: Orders microservice
 
 ## Prerequisites
 
