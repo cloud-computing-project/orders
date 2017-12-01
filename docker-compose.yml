@@ -3,7 +3,7 @@ services:
   postgres:
     image: postgres:9.6.3
     ports:
-      - 5433:5432
+      - 5432:5432
     environment:
       POSTGRES_USER: dbuser
       POSTGRES_PASSWORD: postgres
@@ -11,8 +11,8 @@ services:
   customers:
     image: ejmric/orders
     ports:
-      - 8080:8081
+      - 8081:8081
     environment:
-      KUMULUZEE_DATASOURCES0_CONNECTIONURL: jdbc:postgresql://postgres:5433/order
+      KUMULUZEE_DATASOURCES0_CONNECTIONURL: jdbc:postgresql://postgres:5432/order
     depends_on:
       - postgres

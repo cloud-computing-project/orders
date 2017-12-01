@@ -10,12 +10,9 @@ import javax.persistence.EntityManager;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
-import java.util.logging.Logger;
 
 @ApplicationScoped
 public class OrdersBean {
-
-    private Logger log = Logger.getLogger(OrdersBean.class.getName());
 
     @Inject
     private EntityManager em;
@@ -72,25 +69,6 @@ public class OrdersBean {
         }
 
         return order;
-    }
-
-    public void setOrderStatus(String orderId, String status) {
-
-        Order order = em.find(Order.class, orderId);
-
-        if (order == null) {
-            throw new NotFoundException();
-        }
-
-        try {
-            beginTx();
-            order.setStatus(status);
-            order = em.merge(order);
-            commitTx();
-        } catch (Exception e) {
-            rollbackTx();
-        }
-
     }
 
     public boolean deleteOrder(String orderId) {

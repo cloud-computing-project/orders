@@ -1,7 +1,5 @@
 package si.fri.rso.samples.orders.api.v1.resources;
 
-import com.kumuluz.ee.logs.cdi.Log;
-import org.eclipse.microprofile.metrics.annotation.Metered;
 import si.fri.rso.samples.orders.Order;
 import si.fri.rso.samples.orders.services.OrdersBean;
 
@@ -18,7 +16,6 @@ import java.util.List;
 @Path("/orders")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Log
 public class OrdersResource {
 
     @Context
@@ -28,7 +25,6 @@ public class OrdersResource {
     private OrdersBean ordersBean;
 
     @GET
-    @Metered
     public Response getOrders() {
 
         List<Order> orders = ordersBean.getOrders(uriInfo);

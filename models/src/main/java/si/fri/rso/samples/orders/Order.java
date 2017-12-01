@@ -25,8 +25,6 @@ public class Order {
 
     private Date submitted;
 
-    private String status;
-
     @Column(name = "customer_id")
     private String customerId;
 
@@ -68,13 +66,5 @@ public class Order {
 
     public void setSubmitted(Date submitted) {
         this.submitted = submitted;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }

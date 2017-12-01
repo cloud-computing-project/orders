@@ -6,6 +6,6 @@ WORKDIR /app
 
 ADD ./api/target/orders-api-1.0.0-SNAPSHOT.jar /app
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["java", "-jar", "orders-api-1.0.0-SNAPSHOT.jar"]
