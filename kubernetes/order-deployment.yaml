@@ -16,7 +16,7 @@ spec:
 
       labels:
 
-        app: order
+        app: orders
 
     spec:
 
