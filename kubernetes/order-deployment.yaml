@@ -42,7 +42,7 @@ spec:
 
           - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
 
-            value: jdbc:postgresql://postgres-orders:5433/order
+            value: jdbc:postgresql://postgres-orders:5432/order
 
           - name: KUMULUZEE_SERVER_BASEURL
 
