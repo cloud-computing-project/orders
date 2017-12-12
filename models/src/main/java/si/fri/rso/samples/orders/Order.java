@@ -19,9 +19,11 @@ public class Order {
     @GeneratedValue(generator = "idGenerator")
     private String id;
 
-    private String title;
+    //private String title;
 
-    private String description;
+    //private String description;
+    @Column(name = "product_id")
+    private String productId;
 
     private Date submitted;
 
@@ -36,27 +38,35 @@ public class Order {
         this.id = id;
     }
 
-    public String getTitle() {
+    /*public String getTitle() {
         return title;
-    }
+    }*/
 
-    public void setTitle(String title) {
+    /*public void setTitle(String title) {
         this.title = title;
-    }
+    }*/
 
-    public String getDescription() {
+    /*public String getDescription() {
         return description;
-    }
+    }*/
 
-    public void setDescription(String description) {
+    /*public void setDescription(String description) {
         this.description = description;
-    }
+    }*/
 
     public String getCustomerId() {
         return customerId;
     }
 
     public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getProductId() {
+        return customerId;
+    }
+
+    public void setProductId(String customerId) {
         this.customerId = customerId;
     }
 
