@@ -10,7 +10,7 @@ spec:
         app: order
     spec:
       containers:
-      - image: jmezna/rso-orders:0.01
+      - image: ejmric/orders:0.01
         name: orders
         env:
           - name: KUMULUZEE_DISCOVERY_CLUSTER
@@ -22,7 +22,7 @@ spec:
           - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
             value: jdbc:postgresql://postgres-orders:5432/order
           - name: KUMULUZEE_SERVER_BASEURL
-            value: http://169.51.13.134:30477
+            value: http://169.51.20.118:30430
         ports:
         - containerPort: 8081
           name: server
