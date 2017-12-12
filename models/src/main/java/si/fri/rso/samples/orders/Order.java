@@ -63,11 +63,11 @@ public class Order {
     }
 
     public String getProductId() {
-        return customerId;
+        return productId;
     }
 
-    public void setProductId(String customerId) {
-        this.customerId = customerId;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public Date getSubmitted() {
