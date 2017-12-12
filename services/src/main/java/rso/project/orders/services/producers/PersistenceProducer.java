@@ -1,4 +1,4 @@
-package si.fri.rso.samples.orders.services.producers;
+package rso.project.orders.services.producers;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Disposes;

@@ -1,7 +1,7 @@
-package si.fri.rso.samples.orders.api.v1.resources;
+package rso.project.orders.api.v1.resources;
 
-import si.fri.rso.samples.orders.Order;
-import si.fri.rso.samples.orders.services.OrdersBean;
+import rso.project.orders.Order;
+import rso.project.orders.services.OrdersBean;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

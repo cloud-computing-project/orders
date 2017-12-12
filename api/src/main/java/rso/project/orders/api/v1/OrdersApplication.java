@@ -1,4 +1,4 @@
-package si.fri.rso.samples.orders.api.v1;
+package rso.project.orders.api.v1;
 
 import com.kumuluz.ee.discovery.annotations.RegisterService;
 

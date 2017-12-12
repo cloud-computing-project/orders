@@ -1,4 +1,4 @@
-package si.fri.rso.samples.orders.api.v1.producers;
+package rso.project.orders.api.v1.producers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

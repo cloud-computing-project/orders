@@ -1,4 +1,4 @@
-package si.fri.rso.samples.orders;
+package rso.project.orders;
 
 import org.eclipse.persistence.annotations.UuidGenerator;
 

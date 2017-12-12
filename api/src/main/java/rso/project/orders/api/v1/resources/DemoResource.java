@@ -1,4 +1,4 @@
-package si.fri.rso.samples.orders.api.v1.resources;
+package rso.project.orders.api.v1.resources;
 
 import com.kumuluz.ee.common.runtime.EeRuntime;
 

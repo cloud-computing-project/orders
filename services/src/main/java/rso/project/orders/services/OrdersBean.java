@@ -1,8 +1,8 @@
-package si.fri.rso.samples.orders.services;
+package rso.project.orders.services;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
-import si.fri.rso.samples.orders.Order;
+import rso.project.orders.Order;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
