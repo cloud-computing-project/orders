@@ -48,7 +48,7 @@ public class OrdersResource {
     @POST
     public Response createOrder(Order order) {
 
-        if (order.getTitle() == null || order.getTitle().isEmpty()) {
+        if (order.getProductId() == null || order.getProductId().isEmpty()) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         } else {
             order = ordersBean.createOrder(order);
