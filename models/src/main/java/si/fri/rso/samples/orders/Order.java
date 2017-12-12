@@ -22,7 +22,7 @@ public class Order {
     //private String title;
 
     //private String description;
-    @Column(name = "product_id")
+    //@Column(name = "product_id")
     private String productId;
 
     private Date submitted;
