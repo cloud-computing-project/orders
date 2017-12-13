@@ -10,7 +10,7 @@ spec:
         app: order
     spec:
       containers:
-      - image: ejmric/orders:0.05
+      - image: ejmric/orders:0.06
         name: orders
         env:
           - name: KUMULUZEE_DISCOVERY_CLUSTER
