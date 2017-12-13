@@ -2,16 +2,20 @@ package rso.project.orders.api.v1.resources;
 
 import com.kumuluz.ee.common.runtime.EeRuntime;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 @Path("demo")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
+@ApplicationScoped
 public class DemoResource {
 
     @GET
@@ -24,4 +28,44 @@ public class DemoResource {
         return Response.ok(instanceId).build();
     }
 
+    @GET
+    @Path("info")
+    public Response info() {
+
+        JSONObject json = new JSONObject();
+
+        JSONArray members = new JSONArray();
+        members.put("bj9914");
+        members.put("as7849");
+        members.put("ao2282");
+
+        JSONArray microservices = new JSONArray();
+        microservices.put("http://169.51.20.134:32584/v1/orders");
+        microservices.put("http://169.51.20.134:31568/v1/customers");
+        microservices.put("http://169.51.20.63:31567/v1/products");
+
+        JSONArray github = new JSONArray();
+        github.put("https://github.com/cloud-computing-project/customers");
+        github.put("https://github.com/cloud-computing-project/orders");
+        github.put("https://github.com/cloud-computing-project/products");
+
+        JSONArray travis = new JSONArray();
+        travis.put("https://travis-ci.org/cloud-computing-project/customers");
+        travis.put("https://travis-ci.org/cloud-computing-project/orders");
+        travis.put("https://travis-ci.org/cloud-computing-project/products");
+
+        JSONArray dockerhub = new JSONArray();
+        dockerhub.put("https://hub.docker.com/r/amela/customers/");
+        dockerhub.put("https://hub.docker.com/r/ejmric/orders/");
+        dockerhub.put("https://hub.docker.com/r/bozen/products/");
+
+        json.put("members", members);
+        json.put("project_description", "Our project includes an application for shopping online(on the example of e-bay).");
+        json.put("microservices", microservices);
+        json.put("github", github);
+        json.put("travis", travis);
+        json.put("dockerhub", dockerhub);
+
+        return Response.ok(json.toString()).build();
+    }
 }
