@@ -36,13 +36,13 @@ public class DemoResource {
         JSONObject json = new JSONObject();
 
         JSONArray members = new JSONArray();
-        members.put("bj9914");
         members.put("as7849");
         members.put("ao2282");
+        members.put("bj9914");
 
         JSONArray microservices = new JSONArray();
-        microservices.put("http://169.51.20.134:32584/v1/orders");
         microservices.put("http://169.51.20.134:31568/v1/customers");
+        microservices.put("http://169.51.20.134:32564/v1/orders");
         microservices.put("http://169.51.20.63:31567/v1/products");
 
         JSONArray github = new JSONArray();
