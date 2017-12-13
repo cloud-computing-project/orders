@@ -30,6 +30,7 @@ public class DemoResource {
 
     @GET
     @Path("info")
+    @Produces("application/json")
     public Response info() {
 
         JSONObject json = new JSONObject();
