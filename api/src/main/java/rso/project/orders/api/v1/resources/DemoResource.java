@@ -3,20 +3,23 @@ package rso.project.orders.api.v1.resources;
 import com.kumuluz.ee.common.runtime.EeRuntime;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import rso.project.orders.api.v1.configuration.RestProperties;
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.ws.rs.*;
 
 @Path("demo")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @ApplicationScoped
 public class DemoResource {
+
+    @Inject
+    private RestProperties restProperties;
 
     @GET
     @Path("instanceid")
@@ -26,6 +29,13 @@ public class DemoResource {
                 "{\"instanceId\" : \"" + EeRuntime.getInstance().getInstanceId() + "\"}";
 
         return Response.ok(instanceId).build();
+    }
+
+    @POST
+    @Path("healthy")
+    public Response setHealth(Boolean healthy) {
+        restProperties.setHealthy(healthy);
+        return Response.ok().build();
     }
 
     @GET
