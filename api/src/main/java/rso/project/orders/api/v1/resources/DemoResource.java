@@ -32,7 +32,7 @@ public class DemoResource {
 
     @POST
     @Path("healthy")
-    public Response setHealth(boolean healthy) {
+    public Response setHealth(Boolean healthy) {
         restProperties.setHealthy(healthy);
         return Response.ok().build();
     }
