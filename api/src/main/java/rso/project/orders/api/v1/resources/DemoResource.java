@@ -1,7 +1,6 @@
 package rso.project.orders.api.v1.resources;
 
 import com.kumuluz.ee.common.runtime.EeRuntime;
-
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -33,8 +32,7 @@ public class DemoResource {
 
     @POST
     @Path("healthy")
-    public Response setHealth(Boolean healthy) {
-        log.info("var healthy: " + healthy);
+    public Response setHealth(boolean healthy) {
         restProperties.setHealthy(healthy);
         return Response.ok().build();
     }
