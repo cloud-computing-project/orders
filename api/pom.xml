@@ -10,7 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>orders-api</artifactId>
-
     <dependencies>
         <dependency>
             <groupId>rso.project</groupId>
@@ -37,6 +36,10 @@
         <dependency>
             <groupId>com.kumuluz.ee.health</groupId>
             <artifactId>kumuluzee-health</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kumuluz.ee.cors</groupId>
+            <artifactId>kumuluzee-cors</artifactId>
         </dependency>
     </dependencies>
 

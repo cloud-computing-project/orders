@@ -39,6 +39,14 @@ public class DemoResource {
     }
 
     @GET
+    @Path("healthy")
+    public boolean getHealth() {
+        return restProperties.isHealthy();
+    }
+
+
+
+    @GET
     @Path("info")
     @Produces("application/json")
     public Response info() {

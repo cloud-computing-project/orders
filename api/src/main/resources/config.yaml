@@ -20,6 +20,9 @@ kumuluzee:
       checks:
         data-source-health-check:
           jndi-name: jdbc/OrdersDS
-  rest-properties:
-    healthy: true
+  cors-filter:
+    servlet:
+      allow-origin: "*"
+rest-properties:
+  healthy: true
 
