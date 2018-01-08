@@ -34,6 +34,7 @@ public class DemoResource {
     @POST
     @Path("healthy")
     public Response setHealth(Boolean healthy) {
+        log.info("var healthy: " + healthy);
         restProperties.setHealthy(healthy);
         return Response.ok().build();
     }
@@ -43,7 +44,6 @@ public class DemoResource {
     public boolean getHealth() {
         return restProperties.isHealthy();
     }
-
 
 
     @GET
