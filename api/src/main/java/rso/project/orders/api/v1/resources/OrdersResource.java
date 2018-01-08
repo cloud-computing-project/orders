@@ -2,7 +2,7 @@ package rso.project.orders.api.v1.resources;
 
 import rso.project.orders.Order;
 import rso.project.orders.services.OrdersBean;
-
+import org.eclipse.microprofile.metrics.annotation.Metered;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -25,6 +25,7 @@ public class OrdersResource {
     private OrdersBean ordersBean;
 
     @GET
+    @Metered
     public Response getOrders() {
 
         List<Order> orders = ordersBean.getOrders(uriInfo);

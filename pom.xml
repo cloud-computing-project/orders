@@ -27,6 +27,7 @@
         <kumuluzee-health.version>1.0.0-SNAPSHOT</kumuluzee-health.version>
         <postgresql.version>42.1.4</postgresql.version>
         <kumuluzee-cors.version>1.0.2</kumuluzee-cors.version>
+        <kumuluzee-metrics.version>1.0.0-SNAPSHOT</kumuluzee-metrics.version>
     </properties>
 
     <repositories>
@@ -82,7 +83,11 @@
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.kumuluz.ee.metrics</groupId>
+                <artifactId>kumuluzee-metrics-core</artifactId>
+                <version>${kumuluzee-metrics.version}</version>
+            </dependency>
             <dependency>
                 <groupId>rso.project</groupId>
                 <artifactId>orders-api</artifactId>

@@ -14,7 +14,7 @@ cache:
   - $HOME/.m2
 
 env:
-  - DOCKER_IMAGE=ejmric/orders:health3
+  - DOCKER_IMAGE=ejmric/orders:metrics
 
 script:
   - mvn clean package -U
