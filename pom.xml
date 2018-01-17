@@ -27,7 +27,9 @@
         <kumuluzee-health.version>1.0.0-SNAPSHOT</kumuluzee-health.version>
         <postgresql.version>42.1.4</postgresql.version>
         <kumuluzee-cors.version>1.0.2</kumuluzee-cors.version>
+        <kumuluzee-fault-tolerance.version>1.0.0-SNAPSHOT</kumuluzee-fault-tolerance.version>
         <kumuluzee-metrics.version>1.0.0-SNAPSHOT</kumuluzee-metrics.version>
+        <hystrix-metrics-event-stream.version>1.5.12</hystrix-metrics-event-stream.version>
     </properties>
 
     <repositories>
@@ -102,6 +104,16 @@
                 <groupId>rso.project</groupId>
                 <artifactId>orders-services</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kumuluz.ee.fault.tolerance</groupId>
+                <artifactId>kumuluzee-fault-tolerance-hystrix</artifactId>
+                <version>${kumuluzee-fault-tolerance.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.netflix.hystrix</groupId>
+                <artifactId>hystrix-metrics-event-stream</artifactId>
+                <version>${hystrix-metrics-event-stream.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
