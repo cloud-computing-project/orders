@@ -4,6 +4,7 @@ import rso.project.orders.Order;
 import rso.project.orders.services.OrdersBean;
 import org.eclipse.microprofile.metrics.annotation.Metered;
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -12,7 +13,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.util.List;
 
-@ApplicationScoped
+@RequestScoped
 @Path("/orders")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
