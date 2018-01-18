@@ -28,6 +28,9 @@ public class Order {
     @Column(name = "customer_id")
     private String customerId;
 
+    @Column(name = "payment_id")
+    private String paymentId;
+
     public String getId() {
         return id;
     }
@@ -58,5 +61,13 @@ public class Order {
 
     public void setSubmitted(Date submitted) {
         this.submitted = submitted;
+    }
+
+    public String getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(String paymentId) {
+        this.paymentId = paymentId;
     }
 }
