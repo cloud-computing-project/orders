@@ -19,8 +19,6 @@ public class Order {
     @GeneratedValue(generator = "idGenerator")
     private String id;
 
-    //private String title;
-
     //private String description;
     @Column(name = "product_id")
     private String productId;

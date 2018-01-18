@@ -14,7 +14,7 @@ cache:
   - $HOME/.m2
 
 env:
-  - DOCKER_IMAGE=amela/orders:test
+  - DOCKER_IMAGE=ejmric/orders:testetcd
 
 script:
   - mvn clean package -U
