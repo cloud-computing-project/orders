@@ -65,7 +65,7 @@ public class OrdersResource {
 
     @PUT
     @Path("{orderId}")
-    public Response putZavarovanec(@PathParam("orderId") String orderId, Order order) {
+    public Response putOrder(@PathParam("orderId") String orderId, Order order) {
 
         order = ordersBean.putOrder(orderId, order);
 
@@ -81,7 +81,7 @@ public class OrdersResource {
 
     @DELETE
     @Path("{orderId}")
-    public Response deleteCustomer(@PathParam("orderId") String orderId) {
+    public Response deleteOrder(@PathParam("orderId") String orderId) {
 
         boolean deleted = ordersBean.deleteOrder(orderId);
 

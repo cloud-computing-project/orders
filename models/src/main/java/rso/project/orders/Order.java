@@ -22,7 +22,7 @@ public class Order {
     //private String title;
 
     //private String description;
-    //@Column(name = "product_id")
+    @Column(name = "product_id")
     private String productId;
 
     private Date submitted;
@@ -37,22 +37,6 @@ public class Order {
     public void setId(String id) {
         this.id = id;
     }
-
-    /*public String getTitle() {
-        return title;
-    }*/
-
-    /*public void setTitle(String title) {
-        this.title = title;
-    }*/
-
-    /*public String getDescription() {
-        return description;
-    }*/
-
-    /*public void setDescription(String description) {
-        this.description = description;
-    }*/
 
     public String getCustomerId() {
         return customerId;
